@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 1000 Most Frequent English Words - 85-90% of Daily Speech</title>
+    <title>Top 1000 Words - Page 1 (Words 101-300)</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -28,7 +28,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -43,17 +43,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
         }
         
         h1 {
@@ -84,30 +73,50 @@
             gap: 1rem;
         }
         
-        .back-link {
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 8px;
+            transition: all 0.3s ease;
         }
         
-        .back-link:hover {
+        .nav-link:hover {
             background: white;
-            transform: translateX(-4px);
         }
         
-        .progress {
-            font-size: 0.9rem;
-            color: var(--secondary);
+        .page-nav {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .page-link {
+            padding: 0.5rem 0.75rem;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 6px;
             font-weight: 600;
-            background: white;
-            padding: 0.5rem 1.25rem;
-            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .page-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .page-link.active {
+            background: var(--primary);
+            color: white;
         }
         
         .content {
@@ -120,12 +129,6 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 2rem;
-        }
-        
-        .info-box p {
-            color: var(--dark);
-            line-height: 1.6;
-            margin: 0;
         }
         
         table {
@@ -148,50 +151,39 @@
             text-align: left;
             font-weight: 600;
             font-size: 1rem;
-            letter-spacing: 0.5px;
         }
         
         th:first-child {
             border-top-left-radius: 12px;
-            width: 15%;
+            width: 12%;
         }
         
         th:nth-child(2) {
-            width: 25%;
+            width: 18%;
             direction: rtl;
             text-align: right;
             font-family: 'Noto Sans Arabic', sans-serif;
         }
         
-        th:last-child {
-            border-top-right-radius: 12px;
-            width: 60%;
+        th:nth-child(3) {
+            width: 35%;
         }
         
-        tbody tr {
-            transition: all 0.2s ease;
+        th:last-child {
+            border-top-right-radius: 12px;
+            width: 35%;
+            direction: rtl;
+            text-align: right;
+            font-family: 'Noto Sans Arabic', sans-serif;
         }
         
         tbody tr:hover {
             background: rgba(244, 162, 97, 0.08);
-            transform: scale(1.01);
         }
         
         td {
-            padding: 1.25rem 1rem;
+            padding: 1rem;
             border-bottom: 1px solid #e8e8e8;
-        }
-        
-        tbody tr:last-child td:first-child {
-            border-bottom-left-radius: 12px;
-        }
-        
-        tbody tr:last-child td:last-child {
-            border-bottom-right-radius: 12px;
-        }
-        
-        tbody tr:last-child td {
-            border-bottom: none;
         }
         
         .word {
@@ -221,209 +213,1255 @@
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .content {
-                padding: 1rem;
-            }
-            
-            th, td {
-                padding: 0.875rem 0.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .word {
-                font-size: 1rem;
-            }
+            h1 { font-size: 2rem; }
+            .content { padding: 1rem; }
+            th, td { padding: 0.75rem 0.5rem; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Top 1000 Most Frequent Words</h1>
-            <p class="subtitle">Conversational Fluency - 85-90% of Everyday Speech</p>
+            <h1>Top 1000 Words - Page 1</h1>
+            <p class="subtitle">Words 101-300 (200 words)</p>
         </div>
         
         <div class="nav">
-            <a href="index.html" class="back-link">← Back to Index</a>
-            <span class="progress">Progress: 1000 / 3000 words</span>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">← Home</a>
+                <a href="top_100_words.html" class="nav-link">Top 100</a>
+            </div>
+            <div class="page-nav">
+                <span class="page-link active">1</span>
+                <a href="top_1000_p2.html" class="page-link">2</a>
+                <a href="top_1000_p3.html" class="page-link">3</a>
+                <a href="top_1000_p4.html" class="page-link">4</a>
+                <a href="top_1000_p5.html" class="page-link">5</a>
+                <a href="top_1000_p2.html" class="page-link">Next →</a>
+            </div>
         </div>
         
         <div class="content">
             <div class="info-box">
-                <p><strong>📚 Learning Tip:</strong> You've mastered the top 100! These next 900 words will take you from basic communication to conversational fluency, covering 85-90% of everyday English!</p>
+                <p><strong>📚 Page 1 of 5:</strong> Building on the top 100! These 200 words will expand your vocabulary significantly.</p>
             </div>
             
             <table>
                 <thead>
                     <tr>
-                        <th>English Word</th>
-                        <th>المعنى بالعربية</th>
+                        <th>English</th>
+                        <th>المعنى</th>
                         <th>Example</th>
+                        <th>ترجمة المثال</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- All 100 words from the top 100 list included here -->
-                    <tr><td class="word">the</td><td class="arabic">الـ</td><td class="example"><span class="highlight">The</span> cat is sleeping.</td></tr>
-                    <tr><td class="word">be</td><td class="arabic">يكون</td><td class="example">I want to <span class="highlight">be</span> happy.</td></tr>
-                    <tr><td class="word">to</td><td class="arabic">إلى</td><td class="example">Go <span class="highlight">to</span> school.</td></tr>
-                    <tr><td class="word">of</td><td class="arabic">من</td><td class="example">Cup <span class="highlight">of</span> tea.</td></tr>
-                    <tr><td class="word">and</td><td class="arabic">و</td><td class="example">You <span class="highlight">and</span> me.</td></tr>
-                    <tr><td class="word">a</td><td class="arabic">أداة تنكير</td><td class="example">I have <span class="highlight">a</span> dog.</td></tr>
-                    <tr><td class="word">in</td><td class="arabic">في</td><td class="example">She lives <span class="highlight">in</span> London.</td></tr>
-                    <tr><td class="word">that</td><td class="arabic">ذلك</td><td class="example">I think <span class="highlight">that</span> you're right.</td></tr>
-                    <tr><td class="word">have</td><td class="arabic">لديه</td><td class="example">I <span class="highlight">have</span> two cats.</td></tr>
-                    <tr><td class="word">I</td><td class="arabic">أنا</td><td class="example"><span class="highlight">I</span> am happy!</td></tr>
-                    
-                    <!-- Additional 200+ sample words showing the pattern continues -->
-                    <tr><td class="word">include</td><td class="arabic">يشمل</td><td class="example">The price <span class="highlight">includes</span> breakfast.</td></tr>
-                    <tr><td class="word">continue</td><td class="arabic">يستمر</td><td class="example">Please <span class="highlight">continue</span> reading.</td></tr>
-                    <tr><td class="word">learn</td><td class="arabic">يتعلم</td><td class="example">I want to <span class="highlight">learn</span> English.</td></tr>
-                    <tr><td class="word">understand</td><td class="arabic">يفهم</td><td class="example">I don't <span class="highlight">understand</span> this.</td></tr>
-                    <tr><td class="word">watch</td><td class="arabic">يشاهد</td><td class="example">I <span class="highlight">watch</span> TV at night.</td></tr>
-                    <tr><td class="word">follow</td><td class="arabic">يتبع</td><td class="example">Please <span class="highlight">follow</span> me.</td></tr>
-                    <tr><td class="word">stop</td><td class="arabic">يتوقف</td><td class="example"><span class="highlight">Stop</span> talking!</td></tr>
-                    <tr><td class="word">create</td><td class="arabic">يخلق</td><td class="example">Let's <span class="highlight">create</span> something new.</td></tr>
-                    <tr><td class="word">speak</td><td class="arabic">يتحدث</td><td class="example">I <span class="highlight">speak</span> three languages.</td></tr>
-                    <tr><td class="word">read</td><td class="arabic">يقرأ</td><td class="example">I <span class="highlight">read</span> every day.</td></tr>
-                    <tr><td class="word">spend</td><td class="arabic">ينفق</td><td class="example">Don't <span class="highlight">spend</span> too much!</td></tr>
-                    <tr><td class="word">grow</td><td class="arabic">ينمو</td><td class="example">Plants <span class="highlight">grow</span> in spring.</td></tr>
-                    <tr><td class="word">open</td><td class="arabic">يفتح</td><td class="example"><span class="highlight">Open</span> the door, please.</td></tr>
-                    <tr><td class="word">walk</td><td class="arabic">يمشي</td><td class="example">I <span class="highlight">walk</span> to work.</td></tr>
-                    <tr><td class="word">win</td><td class="arabic">يفوز</td><td class="example">Our team will <span class="highlight">win</span>!</td></tr>
-                    <tr><td class="word">offer</td><td class="arabic">يعرض</td><td class="example">Can I <span class="highlight">offer</span> you tea?</td></tr>
-                    <tr><td class="word">remember</td><td class="arabic">يتذكر</td><td class="example">I <span class="highlight">remember</span> you!</td></tr>
-                    <tr><td class="word">love</td><td class="arabic">يحب</td><td class="example">I <span class="highlight">love</span> chocolate.</td></tr>
-                    <tr><td class="word">consider</td><td class="arabic">يعتبر</td><td class="example">I'll <span class="highlight">consider</span> your offer.</td></tr>
-                    <tr><td class="word">appear</td><td class="arabic">يظهر</td><td class="example">Stars <span class="highlight">appear</span> at night.</td></tr>
-                    <tr><td class="word">buy</td><td class="arabic">يشتري</td><td class="example">I want to <span class="highlight">buy</span> a car.</td></tr>
-                    <tr><td class="word">wait</td><td class="arabic">ينتظر</td><td class="example"><span class="highlight">Wait</span> for me!</td></tr>
-                    <tr><td class="word">serve</td><td class="arabic">يخدم</td><td class="example">Dinner is <span class="highlight">served</span>.</td></tr>
-                    <tr><td class="word">die</td><td class="arabic">يموت</td><td class="example">Old trees <span class="highlight">die</span> in winter.</td></tr>
-                    <tr><td class="word">send</td><td class="arabic">يرسل</td><td class="example"><span class="highlight">Send</span> me a message.</td></tr>
-                    <tr><td class="word">expect</td><td class="arabic">يتوقع</td><td class="example">I <span class="highlight">expect</span> good news.</td></tr>
-                    <tr><td class="word">build</td><td class="arabic">يبني</td><td class="example">We'll <span class="highlight">build</span> a house.</td></tr>
-                    <tr><td class="word">stay</td><td class="arabic">يبقى</td><td class="example"><span class="highlight">Stay</span> with me.</td></tr>
-                    <tr><td class="word">fall</td><td class="arabic">يسقط</td><td class="example">Leaves <span class="highlight">fall</span> in autumn.</td></tr>
-                    <tr><td class="word">cut</td><td class="arabic">يقطع</td><td class="example"><span class="highlight">Cut</span> the paper.</td></tr>
-                    <tr><td class="word">reach</td><td class="arabic">يصل</td><td class="example">We'll <span class="highlight">reach</span> home soon.</td></tr>
-                    <tr><td class="word">kill</td><td class="arabic">يقتل</td><td class="example">Don't <span class="highlight">kill</span> insects!</td></tr>
-                    <tr><td class="word">raise</td><td class="arabic">يرفع</td><td class="example"><span class="highlight">Raise</span> your hand.</td></tr>
-                    <tr><td class="word">pass</td><td class="arabic">يمر</td><td class="example">Time <span class="highlight">passes</span> quickly.</td></tr>
-                    <tr><td class="word">sell</td><td class="arabic">يبيع</td><td class="example">We <span class="highlight">sell</span> fresh bread.</td></tr>
-                    <tr><td class="word">decide</td><td class="arabic">يقرر</td><td class="example">You must <span class="highlight">decide</span> now.</td></tr>
-                    <tr><td class="word">return</td><td class="arabic">يعود</td><td class="example">I'll <span class="highlight">return</span> tomorrow.</td></tr>
-                    <tr><td class="word">explain</td><td class="arabic">يشرح</td><td class="example">Let me <span class="highlight">explain</span> this.</td></tr>
-                    <tr><td class="word">hope</td><td class="arabic">يأمل</td><td class="example">I <span class="highlight">hope</span> you're well!</td></tr>
-                    <tr><td class="word">develop</td><td class="arabic">يطور</td><td class="example">We'll <span class="highlight">develop</span> new skills.</td></tr>
-                    <tr><td class="word">carry</td><td class="arabic">يحمل</td><td class="example"><span class="highlight">Carry</span> this bag.</td></tr>
-                    <tr><td class="word">break</td><td class="arabic">يكسر</td><td class="example">Don't <span class="highlight">break</span> it!</td></tr>
-                    <tr><td class="word">receive</td><td class="arabic">يستقبل</td><td class="example">Did you <span class="highlight">receive</span> my email?</td></tr>
-                    <tr><td class="word">agree</td><td class="arabic">يوافق</td><td class="example">I <span class="highlight">agree</span> with you.</td></tr>
-                    <tr><td class="word">support</td><td class="arabic">يدعم</td><td class="example">Thank you for your <span class="highlight">support</span>!</td></tr>
-                    <tr><td class="word">hit</td><td class="arabic">يضرب</td><td class="example">Don't <span class="highlight">hit</span> people!</td></tr>
-                    <tr><td class="word">produce</td><td class="arabic">ينتج</td><td class="example">We <span class="highlight">produce</span> cars.</td></tr>
-                    <tr><td class="word">eat</td><td class="arabic">يأكل</td><td class="example">Let's <span class="highlight">eat</span> dinner.</td></tr>
-                    <tr><td class="word">cover</td><td class="arabic">يغطي</td><td class="example">Snow <span class="highlight">covers</span> the ground.</td></tr>
-                    <tr><td class="word">catch</td><td class="arabic">يمسك</td><td class="example"><span class="highlight">Catch</span> the ball!</td></tr>
-                    <tr><td class="word">draw</td><td class="arabic">يرسم</td><td class="example">I love to <span class="highlight">draw</span>.</td></tr>
-                    <tr><td class="word">choose</td><td class="arabic">يختار</td><td class="example"><span class="highlight">Choose</span> wisely!</td></tr>
-                    <tr><td class="word">cause</td><td class="arabic">يسبب</td><td class="example">Don't <span class="highlight">cause</span> problems.</td></tr>
-                    <tr><td class="word">point</td><td class="arabic">يشير</td><td class="example">Don't <span class="highlight">point</span> at people.</td></tr>
-                    <tr><td class="word">pull</td><td class="arabic">يسحب</td><td class="example"><span class="highlight">Pull</span> the door.</td></tr>
-                    <tr><td class="word">accept</td><td class="arabic">يقبل</td><td class="example">I <span class="highlight">accept</span> your apology.</td></tr>
-                    <tr><td class="word">wear</td><td class="arabic">يلبس</td><td class="example">I <span class="highlight">wear</span> glasses.</td></tr>
-                    <tr><td class="word">pick</td><td class="arabic">يختار</td><td class="example"><span class="highlight">Pick</span> a color.</td></tr>
-                    <tr><td class="word">drive</td><td class="arabic">يقود</td><td class="example">I can <span class="highlight">drive</span> a car.</td></tr>
-                    <tr><td class="word">own</td><td class="arabic">يملك</td><td class="example">I <span class="highlight">own</span> this house.</td></tr>
-                    <tr><td class="word">face</td><td class="arabic">يواجه</td><td class="example">We <span class="highlight">face</span> challenges.</td></tr>
-                    <tr><td class="word">apply</td><td class="arabic">يطبق</td><td class="example"><span class="highlight">Apply</span> for this job.</td></tr>
-                    <tr><td class="word">join</td><td class="arabic">ينضم</td><td class="example"><span class="highlight">Join</span> our team!</td></tr>
-                    <tr><td class="word">travel</td><td class="arabic">يسافر</td><td class="example">I love to <span class="highlight">travel</span>.</td></tr>
-                    <tr><td class="word">cook</td><td class="arabic">يطبخ</td><td class="example">I <span class="highlight">cook</span> every day.</td></tr>
-                    <tr><td class="word">save</td><td class="arabic">ينقذ</td><td class="example"><span class="highlight">Save</span> your money.</td></tr>
-                    <tr><td class="word">stand</td><td class="arabic">يقف</td><td class="example"><span class="highlight">Stand</span> up straight.</td></tr>
-                    <tr><td class="word">smile</td><td class="arabic">يبتسم</td><td class="example">Please <span class="highlight">smile</span>!</td></tr>
-                    <tr><td class="word">dream</td><td class="arabic">يحلم</td><td class="example">I <span class="highlight">dream</span> of success.</td></tr>
-                    <tr><td class="word">test</td><td class="arabic">يختبر</td><td class="example">We'll <span class="highlight">test</span> this theory.</td></tr>
-                    <tr><td class="word">notice</td><td class="arabic">يلاحظ</td><td class="example">Did you <span class="highlight">notice</span> that?</td></tr>
-                    <tr><td class="word">wish</td><td class="arabic">يتمنى</td><td class="example">I <span class="highlight">wish</span> you luck!</td></tr>
-                    <tr><td class="word">vote</td><td class="arabic">يصوت</td><td class="example">Don't forget to <span class="highlight">vote</span>!</td></tr>
-                    <tr><td class="word">relate</td><td class="arabic">يتصل</td><td class="example">I can <span class="highlight">relate</span> to that.</td></tr>
-                    <tr><td class="word">debate</td><td class="arabic">يناظر</td><td class="example">Let's <span class="highlight">debate</span> this topic.</td></tr>
-                    <tr><td class="word">prevent</td><td class="arabic">يمنع</td><td class="example">We can <span class="highlight">prevent</span> this.</td></tr>
-                    <tr><td class="word">admit</td><td class="arabic">يعترف</td><td class="example">I <span class="highlight">admit</span> my mistake.</td></tr>
-                    <tr><td class="word">assume</td><td class="arabic">يفترض</td><td class="example">Don't <span class="highlight">assume</span> anything!</td></tr>
-                    <tr><td class="word">suffer</td><td class="arabic">يعاني</td><td class="example">Don't <span class="highlight">suffer</span> in silence.</td></tr>
-                    <tr><td class="word">publish</td><td class="arabic">ينشر</td><td class="example">We'll <span class="highlight">publish</span> your story.</td></tr>
-                    <tr><td class="word">recall</td><td class="arabic">يتذكر</td><td class="example">I can't <span class="highlight">recall</span> that.</td></tr>
-                    <tr><td class="word">achieve</td><td class="arabic">يحقق</td><td class="example">You can <span class="highlight">achieve</span> anything!</td></tr>
-                    <tr><td class="word">refer</td><td class="arabic">يشير</td><td class="example">Please <span class="highlight">refer</span> to page 5.</td></tr>
-                    <tr><td class="word">touch</td><td class="arabic">يلمس</td><td class="example">Don't <span class="highlight">touch</span> that!</td></tr>
-                    <tr><td class="word">attend</td><td class="arabic">يحضر</td><td class="example">Will you <span class="highlight">attend</span> the party?</td></tr>
-                    <tr><td class="word">replace</td><td class="arabic">يستبدل</td><td class="example">We'll <span class="highlight">replace</span> it.</td></tr>
-                    <tr><td class="word">encourage</td><td class="arabic">يشجع</td><td class="example">I <span class="highlight">encourage</span> you to try!</td></tr>
-                    <tr><td class="word">introduce</td><td class="arabic">يقدم</td><td class="example">Let me <span class="highlight">introduce</span> myself.</td></tr>
-                    <tr><td class="word">attempt</td><td class="arabic">يحاول</td><td class="example">I'll <span class="highlight">attempt</span> this task.</td></tr>
-                    <tr><td class="word">hide</td><td class="arabic">يخفي</td><td class="example">Don't <span class="highlight">hide</span> from me!</td></tr>
-                    <tr><td class="word">handle</td><td class="arabic">يتعامل</td><td class="example">I can <span class="highlight">handle</span> this.</td></tr>
-                    <tr><td class="word">refuse</td><td class="arabic">يرفض</td><td class="example">I <span class="highlight">refuse</span> to go.</td></tr>
-                    <tr><td class="word">express</td><td class="arabic">يعبر</td><td class="example"><span class="highlight">Express</span> your feelings.</td></tr>
-                    <tr><td class="word">emerge</td><td class="arabic">يظهر</td><td class="example">Truth will <span class="highlight">emerge</span>.</td></tr>
-                    <tr><td class="word">earn</td><td class="arabic">يكسب</td><td class="example">I <span class="highlight">earn</span> good money.</td></tr>
-                    <tr><td class="word">operate</td><td class="arabic">يشغل</td><td class="example">I can <span class="highlight">operate</span> this machine.</td></tr>
-                    <tr><td class="word">settle</td><td class="arabic">يستقر</td><td class="example">Let's <span class="highlight">settle</span> this.</td></tr>
-                    <tr><td class="word">feed</td><td class="arabic">يطعم</td><td class="example">Please <span class="highlight">feed</span> the cat.</td></tr>
-                    <tr><td class="word">collect</td><td class="arabic">يجمع</td><td class="example">I <span class="highlight">collect</span> stamps.</td></tr>
-                    <tr><td class="word">promote</td><td class="arabic">يروج</td><td class="example">We'll <span class="highlight">promote</span> this product.</td></tr>
-                    <tr><td class="word">count</td><td class="arabic">يعد</td><td class="example">Can you <span class="highlight">count</span> to ten?</td></tr>
-                    <tr><td class="word">marry</td><td class="arabic">يتزوج</td><td class="example">They will <span class="highlight">marry</span> soon.</td></tr>
-                    <tr><td class="word">survive</td><td class="arabic">ينجو</td><td class="example">We'll <span class="highlight">survive</span> this!</td></tr>
-                    <tr><td class="word">lift</td><td class="arabic">يرفع</td><td class="example"><span class="highlight">Lift</span> your arms.</td></tr>
-                    <tr><td class="word">gather</td><td class="arabic">يجمع</td><td class="example">Let's <span class="highlight">gather</span> information.</td></tr>
-                    <tr><td class="word">fit</td><td class="arabic">يناسب</td><td class="example">This shirt doesn't <span class="highlight">fit</span>.</td></tr>
-                    <tr><td class="word">cry</td><td class="arabic">يبكي</td><td class="example">Don't <span class="highlight">cry</span>!</td></tr>
-                    <tr><td class="word">spread</td><td class="arabic">ينتشر</td><td class="example">News <span class="highlight">spreads</span> fast.</td></tr>
-                    <tr><td class="word">ignore</td><td class="arabic">يتجاهل</td><td class="example">Don't <span class="highlight">ignore</span> me!</td></tr>
-                    <tr><td class="word">demonstrate</td><td class="arabic">يظهر</td><td class="example">Let me <span class="highlight">demonstrate</span> this.</td></tr>
-                    <tr><td class="word">threaten</td><td class="arabic">يهدد</td><td class="example">Don't <span class="highlight">threaten</span> people!</td></tr>
-                    <tr><td class="word">commit</td><td class="arabic">يرتكب</td><td class="example">Don't <span class="highlight">commit</span> crimes!</td></tr>
-                    <tr><td class="word">reveal</td><td class="arabic">يكشف</td><td class="example">I'll <span class="highlight">reveal</span> the truth.</td></tr>
-                    <tr><td class="word">maintain</td><td class="arabic">يحافظ</td><td class="example"><span class="highlight">Maintain</span> good health.</td></tr>
-                    <tr><td class="word">respond</td><td class="arabic">يرد</td><td class="example">Please <span class="highlight">respond</span> quickly.</td></tr>
-                    <tr><td class="word">shake</td><td class="arabic">يهز</td><td class="example"><span class="highlight">Shake</span> the bottle.</td></tr>
-                    <tr><td class="word">fly</td><td class="arabic">يطير</td><td class="example">Birds <span class="highlight">fly</span> high.</td></tr>
-                    <tr><td class="word">interview</td><td class="arabic">يقابل</td><td class="example">I have an <span class="highlight">interview</span> today.</td></tr>
-                    <tr><td class="word">manage</td><td class="arabic">يدير</td><td class="example">She <span class="highlight">manages</span> the store.</td></tr>
-                    <tr><td class="word">discover</td><td class="arabic">يكتشف</td><td class="example">We'll <span class="highlight">discover</span> new things!</td></tr>
-                    <tr><td class="word">worry</td><td class="arabic">يقلق</td><td class="example">Don't <span class="highlight">worry</span> about it.</td></tr>
-                    <tr><td class="word">mention</td><td class="arabic">يذكر</td><td class="example">Did I <span class="highlight">mention</span> that?</td></tr>
-                    <tr><td class="word">improve</td><td class="arabic">يحسن</td><td class="example">We'll <span class="highlight">improve</span> quality.</td></tr>
-                    <tr><td class="word">reflect</td><td class="arabic">يعكس</td><td class="example">This <span class="highlight">reflects</span> your work.</td></tr>
-                    <tr><td class="word">exist</td><td class="arabic">يوجد</td><td class="example">Does this <span class="highlight">exist</span>?</td></tr>
-                    <tr><td class="word">extend</td><td class="arabic">يمتد</td><td class="example">Can we <span class="highlight">extend</span> the deadline?</td></tr>
-                    <tr><td class="word">combine</td><td class="arabic">يدمج</td><td class="example">Let's <span class="highlight">combine</span> ideas.</td></tr>
-                    <tr><td class="word">depend</td><td class="arabic">يعتمد</td><td class="example">I <span class="highlight">depend</span> on you.</td></tr>
-                    <tr><td class="word">grab</td><td class="arabic">يمسك</td><td class="example"><span class="highlight">Grab</span> your coat!</td></tr>
-                    <tr><td class="word">participate</td><td class="arabic">يشارك</td><td class="example">Please <span class="highlight">participate</span> actively.</td></tr>
-                    <tr><td class="word">search</td><td class="arabic">يبحث</td><td class="example">Let's <span class="highlight">search</span> for it.</td></tr>
-                    <tr><td class="word">engage</td><td class="arabic">ينخرط</td><td class="example"><span class="highlight">Engage</span> with the community.</td></tr>
-                    <tr><td class="word">practice</td><td class="arabic">يمارس</td><td class="example"><span class="highlight">Practice</span> makes perfect!</td></tr>
-                    <tr><td class="word">announce</td><td class="arabic">يعلن</td><td class="example">We'll <span class="highlight">announce</span> results soon.</td></tr>
-                    <tr><td class="word">conduct</td><td class="arabic">يجري</td><td class="example">We'll <span class="highlight">conduct</span> research.</td></tr>
-                    <tr><td class="word">examine</td><td class="arabic">يفحص</td><td class="example">The doctor will <span class="highlight">examine</span> you.</td></tr>
-                    <tr><td class="word">sleep</td><td class="arabic">ينام</td><td class="example">I need to <span class="highlight">sleep</span> now.</td></tr>
-                    <tr><td class="word">press</td><td class="arabic">يضغط</td><td class="example"><span class="highlight">Press</span> the button.</td></tr>
-                    <tr><td class="word">define</td><td class="arabic">يعرّف</td><td class="example">Can you <span class="highlight">define</span> this word?</td></tr>
-                    <tr><td class="word">tire</td><td class="arabic">يتعب</td><td class="example">I never <span class="highlight">tire</span> of learning!</td></tr>
-                    <tr><td class="word">hire</td><td class="arabic">يوظف</td><td class="example">We'll <span class="highlight">hire</span> new staff.</td></tr>
-                    
-                    <tr><td colspan="3" style="text-align: center; padding: 2rem; background: var(--light); font-style: italic; color: var(--secondary);">
-                        <strong>📖 Note:</strong> This sample shows 200+ words with full translations and examples. For the complete 1000-word list with all entries, this format would continue with similar high-quality content covering all essential vocabulary for conversational fluency!
-                    </td></tr>
+                    <tr>
+                        <td class="word">man</td>
+                        <td class="arabic">رجل</td>
+                        <td class="example">That <span class="highlight">man</span> is my uncle.</td>
+                        <td class="arabic">ذلك الرجل هو عمي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">woman</td>
+                        <td class="arabic">امرأة</td>
+                        <td class="example">The <span class="highlight">woman</span> is a doctor.</td>
+                        <td class="arabic">المرأة طبيبة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">child</td>
+                        <td class="arabic">طفل</td>
+                        <td class="example">The <span class="highlight">child</span> is playing.</td>
+                        <td class="arabic">الطفل يلعب.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">person</td>
+                        <td class="arabic">شخص</td>
+                        <td class="example">Who is that <span class="highlight">person</span>?</td>
+                        <td class="arabic">من ذلك الشخص؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">boy</td>
+                        <td class="arabic">ولد</td>
+                        <td class="example">The <span class="highlight">boy</span> is reading.</td>
+                        <td class="arabic">الولد يقرأ.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">girl</td>
+                        <td class="arabic">فتاة</td>
+                        <td class="example">The <span class="highlight">girl</span> is singing.</td>
+                        <td class="arabic">الفتاة تغني.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">friend</td>
+                        <td class="arabic">صديق</td>
+                        <td class="example">She is my best <span class="highlight">friend</span>.</td>
+                        <td class="arabic">هي أفضل صديقة لي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">family</td>
+                        <td class="arabic">عائلة</td>
+                        <td class="example">I love my <span class="highlight">family</span>.</td>
+                        <td class="arabic">أحب عائلتي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">group</td>
+                        <td class="arabic">مجموعة</td>
+                        <td class="example">Join our study <span class="highlight">group</span>.</td>
+                        <td class="arabic">انضم إلى مجموعتنا الدراسية.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">part</td>
+                        <td class="arabic">جزء</td>
+                        <td class="example">This is <span class="highlight">part</span> of the plan.</td>
+                        <td class="arabic">هذا جزء من الخطة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">place</td>
+                        <td class="arabic">مكان</td>
+                        <td class="example">This is a nice <span class="highlight">place</span>.</td>
+                        <td class="arabic">هذا مكان جميل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">case</td>
+                        <td class="arabic">حالة / قضية</td>
+                        <td class="example">In this <span class="highlight">case</span>, stay home.</td>
+                        <td class="arabic">في هذه الحالة، ابق في البيت.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">week</td>
+                        <td class="arabic">أسبوع</td>
+                        <td class="example">See you next <span class="highlight">week</span>.</td>
+                        <td class="arabic">أراك الأسبوع القادم.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">company</td>
+                        <td class="arabic">شركة</td>
+                        <td class="example">I work for a big <span class="highlight">company</span>.</td>
+                        <td class="arabic">أعمل في شركة كبيرة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">system</td>
+                        <td class="arabic">نظام</td>
+                        <td class="example">The <span class="highlight">system</span> is working.</td>
+                        <td class="arabic">النظام يعمل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">program</td>
+                        <td class="arabic">برنامج</td>
+                        <td class="example">Watch this TV <span class="highlight">program</span>.</td>
+                        <td class="arabic">شاهد هذا البرنامج التلفزيوني.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">question</td>
+                        <td class="arabic">سؤال</td>
+                        <td class="example">I have a <span class="highlight">question</span>.</td>
+                        <td class="arabic">لدي سؤال.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">government</td>
+                        <td class="arabic">حكومة</td>
+                        <td class="example">The <span class="highlight">government</span> helps people.</td>
+                        <td class="arabic">الحكومة تساعد الناس.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">number</td>
+                        <td class="arabic">رقم / عدد</td>
+                        <td class="example">What's your phone <span class="highlight">number</span>?</td>
+                        <td class="arabic">ما رقم هاتفك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">night</td>
+                        <td class="arabic">ليل / ليلة</td>
+                        <td class="example">Good <span class="highlight">night</span>!</td>
+                        <td class="arabic">تصبح على خير!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">point</td>
+                        <td class="arabic">نقطة</td>
+                        <td class="example">You have a good <span class="highlight">point</span>.</td>
+                        <td class="arabic">لديك نقطة جيدة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">home</td>
+                        <td class="arabic">بيت / منزل</td>
+                        <td class="example">I'm going <span class="highlight">home</span>.</td>
+                        <td class="arabic">أنا ذاهب إلى البيت.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">water</td>
+                        <td class="arabic">ماء</td>
+                        <td class="example">Can I have some <span class="highlight">water</span>?</td>
+                        <td class="arabic">هل يمكنني الحصول على بعض الماء؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">room</td>
+                        <td class="arabic">غرفة</td>
+                        <td class="example">This is my <span class="highlight">room</span>.</td>
+                        <td class="arabic">هذه غرفتي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">mother</td>
+                        <td class="arabic">أم</td>
+                        <td class="example">My <span class="highlight">mother</span> is kind.</td>
+                        <td class="arabic">أمي لطيفة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">area</td>
+                        <td class="arabic">منطقة</td>
+                        <td class="example">This <span class="highlight">area</span> is safe.</td>
+                        <td class="arabic">هذه المنطقة آمنة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">money</td>
+                        <td class="arabic">مال / نقود</td>
+                        <td class="example">I need more <span class="highlight">money</span>.</td>
+                        <td class="arabic">أحتاج المزيد من المال.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">story</td>
+                        <td class="arabic">قصة</td>
+                        <td class="example">Tell me a <span class="highlight">story</span>.</td>
+                        <td class="arabic">اروِ لي قصة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">fact</td>
+                        <td class="arabic">حقيقة</td>
+                        <td class="example">This is a <span class="highlight">fact</span>.</td>
+                        <td class="arabic">هذه حقيقة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">month</td>
+                        <td class="arabic">شهر</td>
+                        <td class="example">My birthday is next <span class="highlight">month</span>.</td>
+                        <td class="arabic">عيد ميلادي الشهر القادم.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">lot</td>
+                        <td class="arabic">الكثير</td>
+                        <td class="example">I have a <span class="highlight">lot</span> of work.</td>
+                        <td class="arabic">لدي الكثير من العمل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">right</td>
+                        <td class="arabic">صحيح / يمين</td>
+                        <td class="example">You are <span class="highlight">right</span>!</td>
+                        <td class="arabic">أنت على حق!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">study</td>
+                        <td class="arabic">دراسة / يدرس</td>
+                        <td class="example">I <span class="highlight">study</span> English.</td>
+                        <td class="arabic">أنا أدرس الإنجليزية.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">book</td>
+                        <td class="arabic">كتاب</td>
+                        <td class="example">This <span class="highlight">book</span> is interesting.</td>
+                        <td class="arabic">هذا الكتاب مثير للاهتمام.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">eye</td>
+                        <td class="arabic">عين</td>
+                        <td class="example">She has blue <span class="highlight">eyes</span>.</td>
+                        <td class="arabic">لديها عيون زرقاء.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">job</td>
+                        <td class="arabic">وظيفة / عمل</td>
+                        <td class="example">I have a good <span class="highlight">job</span>.</td>
+                        <td class="arabic">لدي وظيفة جيدة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">word</td>
+                        <td class="arabic">كلمة</td>
+                        <td class="example">What does this <span class="highlight">word</span> mean?</td>
+                        <td class="arabic">ماذا تعني هذه الكلمة؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">business</td>
+                        <td class="arabic">أعمال / تجارة</td>
+                        <td class="example">He owns a <span class="highlight">business</span>.</td>
+                        <td class="arabic">هو يملك عمل تجاري.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">issue</td>
+                        <td class="arabic">قضية / مشكلة</td>
+                        <td class="example">We need to fix this <span class="highlight">issue</span>.</td>
+                        <td class="arabic">نحتاج لإصلاح هذه المشكلة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">side</td>
+                        <td class="arabic">جانب / جهة</td>
+                        <td class="example">Come to this <span class="highlight">side</span>.</td>
+                        <td class="arabic">تعال إلى هذا الجانب.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">kind</td>
+                        <td class="arabic">نوع / لطيف</td>
+                        <td class="example">What <span class="highlight">kind</span> of music?</td>
+                        <td class="arabic">أي نوع من الموسيقى؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">head</td>
+                        <td class="arabic">رأس</td>
+                        <td class="example">My <span class="highlight">head</span> hurts.</td>
+                        <td class="arabic">رأسي يؤلمني.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">house</td>
+                        <td class="arabic">بيت / منزل</td>
+                        <td class="example">We bought a new <span class="highlight">house</span>.</td>
+                        <td class="arabic">اشترينا منزلاً جديداً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">service</td>
+                        <td class="arabic">خدمة</td>
+                        <td class="example">The <span class="highlight">service</span> is excellent.</td>
+                        <td class="arabic">الخدمة ممتازة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">father</td>
+                        <td class="arabic">أب</td>
+                        <td class="example">My <span class="highlight">father</span> is a teacher.</td>
+                        <td class="arabic">أبي معلم.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">power</td>
+                        <td class="arabic">قوة / طاقة</td>
+                        <td class="example">We lost <span class="highlight">power</span> yesterday.</td>
+                        <td class="arabic">فقدنا الكهرباء أمس.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">hour</td>
+                        <td class="arabic">ساعة</td>
+                        <td class="example">Wait one <span class="highlight">hour</span>.</td>
+                        <td class="arabic">انتظر ساعة واحدة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">game</td>
+                        <td class="arabic">لعبة</td>
+                        <td class="example">Let's play a <span class="highlight">game</span>.</td>
+                        <td class="arabic">لنلعب لعبة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">line</td>
+                        <td class="arabic">خط / طابور</td>
+                        <td class="example">Stand in <span class="highlight">line</span>.</td>
+                        <td class="arabic">قف في الطابور.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">end</td>
+                        <td class="arabic">نهاية</td>
+                        <td class="example">The <span class="highlight">end</span> of the movie was sad.</td>
+                        <td class="arabic">نهاية الفيلم كانت حزينة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">member</td>
+                        <td class="arabic">عضو</td>
+                        <td class="example">She's a <span class="highlight">member</span> of our team.</td>
+                        <td class="arabic">هي عضو في فريقنا.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">law</td>
+                        <td class="arabic">قانون</td>
+                        <td class="example">Follow the <span class="highlight">law</span>.</td>
+                        <td class="arabic">اتبع القانون.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">car</td>
+                        <td class="arabic">سيارة</td>
+                        <td class="example">I drive a red <span class="highlight">car</span>.</td>
+                        <td class="arabic">أقود سيارة حمراء.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">city</td>
+                        <td class="arabic">مدينة</td>
+                        <td class="example">New York is a big <span class="highlight">city</span>.</td>
+                        <td class="arabic">نيويورك مدينة كبيرة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">community</td>
+                        <td class="arabic">مجتمع</td>
+                        <td class="example">Our <span class="highlight">community</span> is friendly.</td>
+                        <td class="arabic">مجتمعنا ودود.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">name</td>
+                        <td class="arabic">اسم</td>
+                        <td class="example">What's your <span class="highlight">name</span>?</td>
+                        <td class="arabic">ما اسمك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">president</td>
+                        <td class="arabic">رئيس</td>
+                        <td class="example">The <span class="highlight">president</span> will speak.</td>
+                        <td class="arabic">سيتحدث الرئيس.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">team</td>
+                        <td class="arabic">فريق</td>
+                        <td class="example">Our <span class="highlight">team</span> won!</td>
+                        <td class="arabic">فريقنا فاز!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">minute</td>
+                        <td class="arabic">دقيقة</td>
+                        <td class="example">Wait a <span class="highlight">minute</span>.</td>
+                        <td class="arabic">انتظر دقيقة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">idea</td>
+                        <td class="arabic">فكرة</td>
+                        <td class="example">That's a great <span class="highlight">idea</span>!</td>
+                        <td class="arabic">هذه فكرة رائعة!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">kid</td>
+                        <td class="arabic">طفل / ولد</td>
+                        <td class="example">The <span class="highlight">kids</span> are playing.</td>
+                        <td class="arabic">الأطفال يلعبون.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">body</td>
+                        <td class="arabic">جسم</td>
+                        <td class="example">Exercise is good for your <span class="highlight">body</span>.</td>
+                        <td class="arabic">التمارين مفيدة لجسمك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">information</td>
+                        <td class="arabic">معلومات</td>
+                        <td class="example">I need more <span class="highlight">information</span>.</td>
+                        <td class="arabic">أحتاج المزيد من المعلومات.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">office</td>
+                        <td class="arabic">مكتب</td>
+                        <td class="example">I work in an <span class="highlight">office</span>.</td>
+                        <td class="arabic">أعمل في مكتب.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">door</td>
+                        <td class="arabic">باب</td>
+                        <td class="example">Close the <span class="highlight">door</span>.</td>
+                        <td class="arabic">أغلق الباب.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">health</td>
+                        <td class="arabic">صحة</td>
+                        <td class="example">Your <span class="highlight">health</span> is important.</td>
+                        <td class="arabic">صحتك مهمة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">art</td>
+                        <td class="arabic">فن</td>
+                        <td class="example">I love modern <span class="highlight">art</span>.</td>
+                        <td class="arabic">أحب الفن الحديث.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">war</td>
+                        <td class="arabic">حرب</td>
+                        <td class="example"><span class="highlight">War</span> is terrible.</td>
+                        <td class="arabic">الحرب أمر فظيع.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">history</td>
+                        <td class="arabic">تاريخ</td>
+                        <td class="example">I study <span class="highlight">history</span>.</td>
+                        <td class="arabic">أدرس التاريخ.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">party</td>
+                        <td class="arabic">حفلة / حزب</td>
+                        <td class="example">Come to my <span class="highlight">party</span>!</td>
+                        <td class="arabic">تعال إلى حفلتي!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">result</td>
+                        <td class="arabic">نتيجة</td>
+                        <td class="example">The <span class="highlight">result</span> was good.</td>
+                        <td class="arabic">كانت النتيجة جيدة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">change</td>
+                        <td class="arabic">تغيير / يغير</td>
+                        <td class="example">I need to <span class="highlight">change</span> my shirt.</td>
+                        <td class="arabic">أحتاج لتغيير قميصي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">morning</td>
+                        <td class="arabic">صباح</td>
+                        <td class="example">Good <span class="highlight">morning</span>!</td>
+                        <td class="arabic">صباح الخير!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">reason</td>
+                        <td class="arabic">سبب</td>
+                        <td class="example">What's the <span class="highlight">reason</span>?</td>
+                        <td class="arabic">ما السبب؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">research</td>
+                        <td class="arabic">بحث</td>
+                        <td class="example">I'm doing <span class="highlight">research</span>.</td>
+                        <td class="arabic">أقوم بإجراء بحث.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">moment</td>
+                        <td class="arabic">لحظة</td>
+                        <td class="example">Wait a <span class="highlight">moment</span>.</td>
+                        <td class="arabic">انتظر لحظة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">air</td>
+                        <td class="arabic">هواء</td>
+                        <td class="example">The <span class="highlight">air</span> is fresh.</td>
+                        <td class="arabic">الهواء منعش.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">teacher</td>
+                        <td class="arabic">معلم / مدرس</td>
+                        <td class="example">My <span class="highlight">teacher</span> is nice.</td>
+                        <td class="arabic">معلمي لطيف.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">force</td>
+                        <td class="arabic">قوة</td>
+                        <td class="example">Use <span class="highlight">force</span> to open it.</td>
+                        <td class="arabic">استخدم القوة لفتحه.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">education</td>
+                        <td class="arabic">تعليم</td>
+                        <td class="example"><span class="highlight">Education</span> is important.</td>
+                        <td class="arabic">التعليم مهم.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">foot</td>
+                        <td class="arabic">قدم</td>
+                        <td class="example">My <span class="highlight">foot</span> hurts.</td>
+                        <td class="arabic">قدمي تؤلمني.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">age</td>
+                        <td class="arabic">عمر / سن</td>
+                        <td class="example">What's your <span class="highlight">age</span>?</td>
+                        <td class="arabic">ما عمرك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">policy</td>
+                        <td class="arabic">سياسة</td>
+                        <td class="example">Read the company <span class="highlight">policy</span>.</td>
+                        <td class="arabic">اقرأ سياسة الشركة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">process</td>
+                        <td class="arabic">عملية</td>
+                        <td class="example">The <span class="highlight">process</span> takes time.</td>
+                        <td class="arabic">العملية تستغرق وقتاً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">music</td>
+                        <td class="arabic">موسيقى</td>
+                        <td class="example">I love <span class="highlight">music</span>.</td>
+                        <td class="arabic">أحب الموسيقى.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">market</td>
+                        <td class="arabic">سوق</td>
+                        <td class="example">Go to the <span class="highlight">market</span>.</td>
+                        <td class="arabic">اذهب إلى السوق.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sense</td>
+                        <td class="arabic">حاسة / معنى</td>
+                        <td class="example">That makes <span class="highlight">sense</span>.</td>
+                        <td class="arabic">هذا منطقي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">nation</td>
+                        <td class="arabic">أمة / دولة</td>
+                        <td class="example">Our <span class="highlight">nation</span> is strong.</td>
+                        <td class="arabic">أمتنا قوية.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">plan</td>
+                        <td class="arabic">خطة / يخطط</td>
+                        <td class="example">What's your <span class="highlight">plan</span>?</td>
+                        <td class="arabic">ما خطتك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">college</td>
+                        <td class="arabic">كلية / جامعة</td>
+                        <td class="example">I go to <span class="highlight">college</span>.</td>
+                        <td class="arabic">أذهب إلى الجامعة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">interest</td>
+                        <td class="arabic">اهتمام</td>
+                        <td class="example">What are your <span class="highlight">interests</span>?</td>
+                        <td class="arabic">ما اهتماماتك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">death</td>
+                        <td class="arabic">موت / وفاة</td>
+                        <td class="example">Life and <span class="highlight">death</span>.</td>
+                        <td class="arabic">الحياة والموت.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">experience</td>
+                        <td class="arabic">خبرة / تجربة</td>
+                        <td class="example">I have teaching <span class="highlight">experience</span>.</td>
+                        <td class="arabic">لدي خبرة في التدريس.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">effect</td>
+                        <td class="arabic">تأثير</td>
+                        <td class="example">The <span class="highlight">effect</span> was amazing.</td>
+                        <td class="arabic">كان التأثير مذهلاً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">class</td>
+                        <td class="arabic">صف / فصل</td>
+                        <td class="example">I have English <span class="highlight">class</span>.</td>
+                        <td class="arabic">لدي حصة إنجليزية.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">control</td>
+                        <td class="arabic">سيطرة / تحكم</td>
+                        <td class="example">You have <span class="highlight">control</span>.</td>
+                        <td class="arabic">لديك السيطرة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">care</td>
+                        <td class="arabic">رعاية / اهتمام</td>
+                        <td class="example">Take <span class="highlight">care</span> of yourself.</td>
+                        <td class="arabic">اعتن بنفسك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">field</td>
+                        <td class="arabic">حقل / مجال</td>
+                        <td class="example">I work in the medical <span class="highlight">field</span>.</td>
+                        <td class="arabic">أعمل في المجال الطبي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">student</td>
+                        <td class="arabic">طالب</td>
+                        <td class="example">I am a <span class="highlight">student</span>.</td>
+                        <td class="arabic">أنا طالب.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">town</td>
+                        <td class="arabic">بلدة</td>
+                        <td class="example">I live in a small <span class="highlight">town</span>.</td>
+                        <td class="arabic">أعيش في بلدة صغيرة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">difference</td>
+                        <td class="arabic">فرق / اختلاف</td>
+                        <td class="example">What's the <span class="highlight">difference</span>?</td>
+                        <td class="arabic">ما الفرق؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">action</td>
+                        <td class="arabic">عمل / فعل</td>
+                        <td class="example">Take <span class="highlight">action</span> now!</td>
+                        <td class="arabic">اتخذ إجراء الآن!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">model</td>
+                        <td class="arabic">نموذج</td>
+                        <td class="example">This is a good <span class="highlight">model</span>.</td>
+                        <td class="arabic">هذا نموذج جيد.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">season</td>
+                        <td class="arabic">موسم / فصل</td>
+                        <td class="example">Summer is my favorite <span class="highlight">season</span>.</td>
+                        <td class="arabic">الصيف موسمي المفضل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">society</td>
+                        <td class="arabic">مجتمع</td>
+                        <td class="example">We live in a modern <span class="highlight">society</span>.</td>
+                        <td class="arabic">نعيش في مجتمع حديث.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">tax</td>
+                        <td class="arabic">ضريبة</td>
+                        <td class="example">We pay <span class="highlight">tax</span> yearly.</td>
+                        <td class="arabic">ندفع الضريبة سنوياً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">director</td>
+                        <td class="arabic">مدير</td>
+                        <td class="example">She's the <span class="highlight">director</span>.</td>
+                        <td class="arabic">هي المديرة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">position</td>
+                        <td class="arabic">موضع / منصب</td>
+                        <td class="example">What's your <span class="highlight">position</span>?</td>
+                        <td class="arabic">ما منصبك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">player</td>
+                        <td class="arabic">لاعب</td>
+                        <td class="example">He's a great <span class="highlight">player</span>.</td>
+                        <td class="arabic">هو لاعب رائع.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">agree</td>
+                        <td class="arabic">يوافق</td>
+                        <td class="example">I <span class="highlight">agree</span> with you.</td>
+                        <td class="arabic">أوافقك الرأي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">record</td>
+                        <td class="arabic">سجل / تسجيل</td>
+                        <td class="example">Keep a <span class="highlight">record</span>.</td>
+                        <td class="arabic">احتفظ بسجل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">paper</td>
+                        <td class="arabic">ورق / ورقة</td>
+                        <td class="example">I need <span class="highlight">paper</span>.</td>
+                        <td class="arabic">أحتاج إلى ورق.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">space</td>
+                        <td class="arabic">مساحة / فضاء</td>
+                        <td class="example">There's no <span class="highlight">space</span>.</td>
+                        <td class="arabic">لا توجد مساحة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">ground</td>
+                        <td class="arabic">أرض</td>
+                        <td class="example">Sit on the <span class="highlight">ground</span>.</td>
+                        <td class="arabic">اجلس على الأرض.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">form</td>
+                        <td class="arabic">نموذج / شكل</td>
+                        <td class="example">Fill out this <span class="highlight">form</span>.</td>
+                        <td class="arabic">املأ هذا النموذج.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">support</td>
+                        <td class="arabic">دعم / يدعم</td>
+                        <td class="example">Thank you for your <span class="highlight">support</span>.</td>
+                        <td class="arabic">شكراً لدعمك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">event</td>
+                        <td class="arabic">حدث / فعالية</td>
+                        <td class="example">The <span class="highlight">event</span> starts at 7.</td>
+                        <td class="arabic">يبدأ الحدث في السابعة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">couple</td>
+                        <td class="arabic">زوجان / اثنان</td>
+                        <td class="example">Wait a <span class="highlight">couple</span> of minutes.</td>
+                        <td class="arabic">انتظر دقيقتين.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">activity</td>
+                        <td class="arabic">نشاط</td>
+                        <td class="example">Swimming is a fun <span class="highlight">activity</span>.</td>
+                        <td class="arabic">السباحة نشاط ممتع.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">star</td>
+                        <td class="arabic">نجمة</td>
+                        <td class="example">Look at the <span class="highlight">stars</span>!</td>
+                        <td class="arabic">انظر إلى النجوم!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">table</td>
+                        <td class="arabic">طاولة</td>
+                        <td class="example">Put it on the <span class="highlight">table</span>.</td>
+                        <td class="arabic">ضعه على الطاولة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">court</td>
+                        <td class="arabic">محكمة / ملعب</td>
+                        <td class="example">Go to <span class="highlight">court</span> tomorrow.</td>
+                        <td class="arabic">اذهب إلى المحكمة غداً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">produce</td>
+                        <td class="arabic">ينتج</td>
+                        <td class="example">This factory <span class="highlight">produces</span> cars.</td>
+                        <td class="arabic">هذا المصنع ينتج سيارات.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">human</td>
+                        <td class="arabic">إنسان / بشري</td>
+                        <td class="example">We are all <span class="highlight">human</span>.</td>
+                        <td class="arabic">نحن جميعاً بشر.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">type</td>
+                        <td class="arabic">نوع / يكتب</td>
+                        <td class="example">What <span class="highlight">type</span> of phone?</td>
+                        <td class="arabic">أي نوع من الهواتف؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">choice</td>
+                        <td class="arabic">خيار / اختيار</td>
+                        <td class="example">You have a <span class="highlight">choice</span>.</td>
+                        <td class="arabic">لديك خيار.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">chance</td>
+                        <td class="arabic">فرصة</td>
+                        <td class="example">Give me another <span class="highlight">chance</span>!</td>
+                        <td class="arabic">أعطني فرصة أخرى!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">read</td>
+                        <td class="arabic">يقرأ</td>
+                        <td class="example">I <span class="highlight">read</span> books daily.</td>
+                        <td class="arabic">أقرأ الكتب يومياً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">term</td>
+                        <td class="arabic">فصل دراسي / مصطلح</td>
+                        <td class="example">The <span class="highlight">term</span> starts in September.</td>
+                        <td class="arabic">يبدأ الفصل الدراسي في سبتمبر.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">thing</td>
+                        <td class="arabic">شيء</td>
+                        <td class="example">What's that <span class="highlight">thing</span>?</td>
+                        <td class="arabic">ما ذلك الشيء؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">police</td>
+                        <td class="arabic">شرطة</td>
+                        <td class="example">Call the <span class="highlight">police</span>!</td>
+                        <td class="arabic">اتصل بالشرطة!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">thought</td>
+                        <td class="arabic">فكرة / اعتقد</td>
+                        <td class="example">I <span class="highlight">thought</span> you were sick.</td>
+                        <td class="arabic">ظننت أنك مريض.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">voice</td>
+                        <td class="arabic">صوت</td>
+                        <td class="example">She has a beautiful <span class="highlight">voice</span>.</td>
+                        <td class="arabic">لديها صوت جميل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">whole</td>
+                        <td class="arabic">كامل / كل</td>
+                        <td class="example">I ate the <span class="highlight">whole</span> cake!</td>
+                        <td class="arabic">أكلت الكعكة كاملة!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">matter</td>
+                        <td class="arabic">مادة / مسألة</td>
+                        <td class="example">What's the <span class="highlight">matter</span>?</td>
+                        <td class="arabic">ما الأمر؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sound</td>
+                        <td class="arabic">صوت</td>
+                        <td class="example">What's that <span class="highlight">sound</span>?</td>
+                        <td class="arabic">ما ذلك الصوت؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">tell</td>
+                        <td class="arabic">يخبر / يقول</td>
+                        <td class="example">Please <span class="highlight">tell</span> me the truth.</td>
+                        <td class="arabic">من فضلك أخبرني الحقيقة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">ask</td>
+                        <td class="arabic">يسأل</td>
+                        <td class="example">Can I <span class="highlight">ask</span> a question?</td>
+                        <td class="arabic">هل يمكنني طرح سؤال؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">seem</td>
+                        <td class="arabic">يبدو</td>
+                        <td class="example">You <span class="highlight">seem</span> tired.</td>
+                        <td class="arabic">تبدو متعباً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">feel</td>
+                        <td class="arabic">يشعر</td>
+                        <td class="example">I <span class="highlight">feel</span> happy.</td>
+                        <td class="arabic">أشعر بالسعادة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">try</td>
+                        <td class="arabic">يحاول</td>
+                        <td class="example"><span class="highlight">Try</span> your best!</td>
+                        <td class="arabic">ابذل قصارى جهدك!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">leave</td>
+                        <td class="arabic">يغادر / يترك</td>
+                        <td class="example">I'll <span class="highlight">leave</span> at 5 PM.</td>
+                        <td class="arabic">سأغادر الساعة الخامسة مساءً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">call</td>
+                        <td class="arabic">يتصل / ينادي</td>
+                        <td class="example">Please <span class="highlight">call</span> me tomorrow.</td>
+                        <td class="arabic">من فضلك اتصل بي غداً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">need</td>
+                        <td class="arabic">يحتاج</td>
+                        <td class="example">I <span class="highlight">need</span> help.</td>
+                        <td class="arabic">أحتاج مساعدة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">become</td>
+                        <td class="arabic">يصبح</td>
+                        <td class="example">I want to <span class="highlight">become</span> a doctor.</td>
+                        <td class="arabic">أريد أن أصبح طبيباً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">keep</td>
+                        <td class="arabic">يحتفظ / يبقي</td>
+                        <td class="example"><span class="highlight">Keep</span> the change.</td>
+                        <td class="arabic">احتفظ بالباقي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">let</td>
+                        <td class="arabic">يسمح / دع</td>
+                        <td class="example"><span class="highlight">Let</span> me help you.</td>
+                        <td class="arabic">دعني أساعدك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">begin</td>
+                        <td class="arabic">يبدأ</td>
+                        <td class="example">Let's <span class="highlight">begin</span> the lesson.</td>
+                        <td class="arabic">لنبدأ الدرس.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">help</td>
+                        <td class="arabic">يساعد / مساعدة</td>
+                        <td class="example">Can you <span class="highlight">help</span> me?</td>
+                        <td class="arabic">هل يمكنك مساعدتي؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">talk</td>
+                        <td class="arabic">يتكلم</td>
+                        <td class="example">I need to <span class="highlight">talk</span> to you.</td>
+                        <td class="arabic">أحتاج للتحدث معك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">turn</td>
+                        <td class="arabic">يدور / ينعطف</td>
+                        <td class="example"><span class="highlight">Turn</span> left here.</td>
+                        <td class="arabic">انعطف يساراً هنا.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">start</td>
+                        <td class="arabic">يبدأ</td>
+                        <td class="example">The movie will <span class="highlight">start</span> soon.</td>
+                        <td class="arabic">سيبدأ الفيلم قريباً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">show</td>
+                        <td class="arabic">يعرض / يظهر</td>
+                        <td class="example"><span class="highlight">Show</span> me your homework.</td>
+                        <td class="arabic">أرني واجبك المنزلي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">hear</td>
+                        <td class="arabic">يسمع</td>
+                        <td class="example">I can <span class="highlight">hear</span> music.</td>
+                        <td class="arabic">أستطيع سماع الموسيقى.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">play</td>
+                        <td class="arabic">يلعب</td>
+                        <td class="example">Let's <span class="highlight">play</span> soccer.</td>
+                        <td class="arabic">لنلعب كرة القدم.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">run</td>
+                        <td class="arabic">يجري</td>
+                        <td class="example">I <span class="highlight">run</span> every morning.</td>
+                        <td class="arabic">أجري كل صباح.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">move</td>
+                        <td class="arabic">يتحرك / ينتقل</td>
+                        <td class="example">We will <span class="highlight">move</span> next month.</td>
+                        <td class="arabic">سننتقل الشهر القادم.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">live</td>
+                        <td class="arabic">يعيش</td>
+                        <td class="example">Where do you <span class="highlight">live</span>?</td>
+                        <td class="arabic">أين تعيش؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">believe</td>
+                        <td class="arabic">يؤمن / يصدق</td>
+                        <td class="example">I <span class="highlight">believe</span> you.</td>
+                        <td class="arabic">أصدقك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">hold</td>
+                        <td class="arabic">يمسك</td>
+                        <td class="example"><span class="highlight">Hold</span> my hand.</td>
+                        <td class="arabic">أمسك يدي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">bring</td>
+                        <td class="arabic">يحضر</td>
+                        <td class="example">Please <span class="highlight">bring</span> your book.</td>
+                        <td class="arabic">من فضلك أحضر كتابك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">happen</td>
+                        <td class="arabic">يحدث</td>
+                        <td class="example">What will <span class="highlight">happen</span> next?</td>
+                        <td class="arabic">ماذا سيحدث بعد ذلك؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">write</td>
+                        <td class="arabic">يكتب</td>
+                        <td class="example"><span class="highlight">Write</span> your name here.</td>
+                        <td class="arabic">اكتب اسمك هنا.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">provide</td>
+                        <td class="arabic">يوفر / يقدم</td>
+                        <td class="example">We <span class="highlight">provide</span> free WiFi.</td>
+                        <td class="arabic">نوفر واي فاي مجاني.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sit</td>
+                        <td class="arabic">يجلس</td>
+                        <td class="example">Please <span class="highlight">sit</span> down.</td>
+                        <td class="arabic">من فضلك اجلس.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">stand</td>
+                        <td class="arabic">يقف</td>
+                        <td class="example"><span class="highlight">Stand</span> up, please.</td>
+                        <td class="arabic">قف من فضلك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">lose</td>
+                        <td class="arabic">يخسر / يفقد</td>
+                        <td class="example">Don't <span class="highlight">lose</span> hope.</td>
+                        <td class="arabic">لا تفقد الأمل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">pay</td>
+                        <td class="arabic">يدفع</td>
+                        <td class="example">I will <span class="highlight">pay</span> for dinner.</td>
+                        <td class="arabic">سأدفع ثمن العشاء.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">meet</td>
+                        <td class="arabic">يقابل</td>
+                        <td class="example">Nice to <span class="highlight">meet</span> you!</td>
+                        <td class="arabic">سعيد بلقائك!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">include</td>
+                        <td class="arabic">يشمل</td>
+                        <td class="example">The price <span class="highlight">includes</span> tax.</td>
+                        <td class="arabic">السعر يشمل الضريبة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">continue</td>
+                        <td class="arabic">يستمر</td>
+                        <td class="example">Please <span class="highlight">continue</span> reading.</td>
+                        <td class="arabic">من فضلك استمر في القراءة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">set</td>
+                        <td class="arabic">يضع / مجموعة</td>
+                        <td class="example"><span class="highlight">Set</span> the alarm for 6 AM.</td>
+                        <td class="arabic">اضبط المنبه على السادسة صباحاً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">learn</td>
+                        <td class="arabic">يتعلم</td>
+                        <td class="example">I want to <span class="highlight">learn</span> English.</td>
+                        <td class="arabic">أريد أن أتعلم الإنجليزية.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">lead</td>
+                        <td class="arabic">يقود / يؤدي</td>
+                        <td class="example">Who will <span class="highlight">lead</span> the team?</td>
+                        <td class="arabic">من سيقود الفريق؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">understand</td>
+                        <td class="arabic">يفهم</td>
+                        <td class="example">I don't <span class="highlight">understand</span> this.</td>
+                        <td class="arabic">أنا لا أفهم هذا.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">watch</td>
+                        <td class="arabic">يشاهد</td>
+                        <td class="example">I <span class="highlight">watch</span> TV every evening.</td>
+                        <td class="arabic">أشاهد التلفاز كل مساء.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">follow</td>
+                        <td class="arabic">يتبع</td>
+                        <td class="example">Please <span class="highlight">follow</span> me.</td>
+                        <td class="arabic">من فضلك اتبعني.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">stop</td>
+                        <td class="arabic">يتوقف</td>
+                        <td class="example"><span class="highlight">Stop</span> talking!</td>
+                        <td class="arabic">توقف عن الكلام!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">create</td>
+                        <td class="arabic">يخلق / يبتكر</td>
+                        <td class="example">Let's <span class="highlight">create</span> something new.</td>
+                        <td class="arabic">لنبتكر شيئاً جديداً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">speak</td>
+                        <td class="arabic">يتحدث</td>
+                        <td class="example">I <span class="highlight">speak</span> three languages.</td>
+                        <td class="arabic">أتحدث ثلاث لغات.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">allow</td>
+                        <td class="arabic">يسمح</td>
+                        <td class="example">Please <span class="highlight">allow</span> me to explain.</td>
+                        <td class="arabic">من فضلك اسمح لي بالشرح.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">add</td>
+                        <td class="arabic">يضيف</td>
+                        <td class="example"><span class="highlight">Add</span> some sugar.</td>
+                        <td class="arabic">أضف بعض السكر.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">spend</td>
+                        <td class="arabic">ينفق / يقضي</td>
+                        <td class="example">Don't <span class="highlight">spend</span> too much!</td>
+                        <td class="arabic">لا تنفق كثيراً!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">grow</td>
+                        <td class="arabic">ينمو</td>
+                        <td class="example">Plants <span class="highlight">grow</span> in spring.</td>
+                        <td class="arabic">تنمو النباتات في الربيع.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">open</td>
+                        <td class="arabic">يفتح</td>
+                        <td class="example"><span class="highlight">Open</span> the door, please.</td>
+                        <td class="arabic">افتح الباب من فضلك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">walk</td>
+                        <td class="arabic">يمشي</td>
+                        <td class="example">I <span class="highlight">walk</span> to work.</td>
+                        <td class="arabic">أمشي إلى العمل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">win</td>
+                        <td class="arabic">يفوز</td>
+                        <td class="example">Our team will <span class="highlight">win</span>!</td>
+                        <td class="arabic">سيفوز فريقنا!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">offer</td>
+                        <td class="arabic">يعرض</td>
+                        <td class="example">Can I <span class="highlight">offer</span> you tea?</td>
+                        <td class="arabic">هل يمكنني أن أقدم لك الشاي؟</td>
+                    </tr>
+                    <tr>
+                        <td class="word">remember</td>
+                        <td class="arabic">يتذكر</td>
+                        <td class="example">I <span class="highlight">remember</span> you!</td>
+                        <td class="arabic">أنا أتذكرك!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">love</td>
+                        <td class="arabic">يحب / حب</td>
+                        <td class="example">I <span class="highlight">love</span> my family.</td>
+                        <td class="arabic">أحب عائلتي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">consider</td>
+                        <td class="arabic">يعتبر / يفكر في</td>
+                        <td class="example">I'll <span class="highlight">consider</span> your offer.</td>
+                        <td class="arabic">سأفكر في عرضك.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">appear</td>
+                        <td class="arabic">يظهر</td>
+                        <td class="example">Stars <span class="highlight">appear</span> at night.</td>
+                        <td class="arabic">تظهر النجوم في الليل.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">buy</td>
+                        <td class="arabic">يشتري</td>
+                        <td class="example">I want to <span class="highlight">buy</span> a car.</td>
+                        <td class="arabic">أريد أن أشتري سيارة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">wait</td>
+                        <td class="arabic">ينتظر</td>
+                        <td class="example"><span class="highlight">Wait</span> for me!</td>
+                        <td class="arabic">انتظرني!</td>
+                    </tr>
+                    <tr>
+                        <td class="word">serve</td>
+                        <td class="arabic">يخدم / يقدم</td>
+                        <td class="example">Dinner is <span class="highlight">served</span>.</td>
+                        <td class="arabic">العشاء جاهز.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">die</td>
+                        <td class="arabic">يموت</td>
+                        <td class="example">Old trees <span class="highlight">die</span> in winter.</td>
+                        <td class="arabic">تموت الأشجار القديمة في الشتاء.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">send</td>
+                        <td class="arabic">يرسل</td>
+                        <td class="example"><span class="highlight">Send</span> me a message.</td>
+                        <td class="arabic">أرسل لي رسالة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">expect</td>
+                        <td class="arabic">يتوقع</td>
+                        <td class="example">I <span class="highlight">expect</span> good news.</td>
+                        <td class="arabic">أتوقع أخباراً جيدة.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">build</td>
+                        <td class="arabic">يبني</td>
+                        <td class="example">We'll <span class="highlight">build</span> a house.</td>
+                        <td class="arabic">سنبني منزلاً.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">stay</td>
+                        <td class="arabic">يبقى</td>
+                        <td class="example"><span class="highlight">Stay</span> with me.</td>
+                        <td class="arabic">ابق معي.</td>
+                    </tr>
+                    <tr>
+                        <td class="word">fall</td>
+                        <td class="arabic">يسقط</td>
+                        <td class="example">Leaves <span class="highlight">fall</span> in autumn.</td>
+                        <td class="arabic">تسقط الأوراق في الخريف.</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

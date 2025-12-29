@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Vocabulary Learning - Most Frequent Words</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #1a472a;
@@ -113,9 +113,85 @@
         .intro {
             font-size: 1rem;
             color: #666;
-            max-width: 600px;
+            max-width: 700px;
             margin: 1.5rem auto 0;
             line-height: 1.6;
+        }
+        
+        .pareto-box {
+            background: linear-gradient(135deg, rgba(244, 162, 97, 0.15) 0%, rgba(26, 71, 42, 0.1) 100%);
+            border: 3px solid var(--accent);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 30px rgba(244, 162, 97, 0.2);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .pareto-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pareto-english, .pareto-arabic {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .pareto-arabic {
+            direction: rtl;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-text {
+            background: linear-gradient(120deg, var(--accent) 0%, #e69055 100%);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(244, 162, 97, 0.3);
+        }
+        
+        .pareto-mission {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .pareto-mission-arabic {
+            direction: rtl;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 1.35rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(244, 162, 97, 0.3); }
+            50% { text-shadow: 0 0 20px rgba(244, 162, 97, 0.6); }
         }
         
         .card-grid {
@@ -269,7 +345,13 @@
         <div class="header">
             <h1>English Vocabulary</h1>
             <p class="subtitle">Most Frequent Words in Everyday Conversation</p>
-            <p class="intro">Master the essential words that make up the foundation of English communication. Each list includes English words, Arabic translations, example sentences, and Arabic translations of examples.</p>
+            <div class="intro">
+                <div class="pareto-box">
+                    <div class="pareto-icon">⚡</div>
+                    <p class="pareto-arabic"><strong>قاعدة 80/20 لتعلم اللغة:</strong> يتطلب الأمر <span class="highlight-text">20% من الجهد</span> لتحقيق <span class="highlight-text">80% من التقدم</span>، ويتطلب <span class="highlight-text">80% من الجهد</span> لتحقيق آخر <span class="highlight-text">20% من التقدم</span> للوصول إلى 100%.</p>
+                    <p class="pareto-mission-arabic">🎯 يساعدك هذا الموقع على تحقيق الـ 80% بأسرع ما يمكن!</p>
+                </div>
+            </div>
         </div>
         
         <div class="card-grid">
@@ -290,16 +372,6 @@
                     <p class="card-description">Expand your vocabulary to handle most everyday situations with confidence. Split into 5 easy pages.</p>
                     <div class="card-stat">📊 Covers 85-90% of daily speech</div>
                     <a href="top_1000_p1.html" class="btn">Continue Learning →</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <span class="card-number">3000</span>
-                <div class="card-content">
-                    <h2 class="card-title">Advanced Mastery</h2>
-                    <p class="card-description">Achieve near-complete understanding of everyday English conversations.</p>
-                    <div class="card-stat">📊 Covers 95% of daily speech</div>
-                    <a href="top_3000_words.html" class="btn">Master English →</a>
                 </div>
             </div>
         </div>
